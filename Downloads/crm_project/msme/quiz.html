@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+		var sec = 100;
+		var time = setInterval(myTimer, 1000);
+		function myTimer() {
+		document.getElementById('timer').innerHTML = sec + "sec left";
+		sec--;
+		if (sec == -1) {
+			clearInterval(time);
+			alert("Time out!! :(");
+    }
+}
+	</script>
+		<title>Dynamic Quiz Project</title>
+		<link type='text/css' rel='stylesheet' href='style2.css'/>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans"/>
+	</head>
+	<body>
+		<div id="count">Start</div>
+		<div id='container'>
+			<div id='title'>
+				<h1>Learning Js Properly: Project #1 - Dynamic Quiz</h1>
+			</div>
+   			<br/>
+  			<div id='quiz'></div>
+			<span id="timer"></span>
+    		<div class='button' id='next'><a href='#'>Next</a></div>
+    		<div class='button' id='prev'><a href='#'>Prev</a></div>
+    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
+    		<!-- <button class='' id='next'>Next</a></button>
+    		<button class='' id='prev'>Prev</a></button>
+    		<button class='' id='start'> Start Over</a></button> -->
+			
+    	</div>
+
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+		<script type="text/javascript" src='questions.json'></script>
+		<script type='text/javascript' src='jsquiz.js'></script>
+	</body>
+</html>
